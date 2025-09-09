@@ -18,7 +18,7 @@ const io = new Server(server, {
 });
 
 //middleware
-pp.use(cors({ origin: process.env.CLIENT_ORIGIN, credentials: true }));
+app.use(cors({ origin: process.env.CLIENT_ORIGIN, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
